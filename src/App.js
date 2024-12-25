@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function NavBar(props) {
@@ -16,6 +16,20 @@ function NavBar(props) {
 }
 
 function Post(props) {
+  const[mode, setLike] = useState('unliked');
+
+  const switchLike = () => {
+    if (mode == 'unliked') {
+      setLike('liked');
+    } else if (mode == 'liked') {
+      setLike('unliked');
+    }
+  }
+
+  useEffect (() => {
+    console.log(mode);
+  }, [mode]);
+
   return (
     <div class="profile_box">
       <div class="name_space">
@@ -24,7 +38,7 @@ function Post(props) {
       </div>
       <img src={props.image} class="image" alt="event post image"/>
       <div class="icon_space">
-        <div class="icons"></div>
+        <div style={{ backgroundColor: mode == 'unliked' ? 'black' : 'lightpink'}} class="icons" onClick={switchLike}></div>
         <div class="icons"></div>
         <div class="icons"></div>
       </div>
