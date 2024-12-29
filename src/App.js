@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Main from "./components/Main/Main.jsx";
+import Users from "./components/Users/Users.jsx";
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
         <Route
           path="/main"
           element={<Main />}
+        />
+        <Route
+        path="/users"
+        element={<Users />}
         />
       </Routes>
     </Router>

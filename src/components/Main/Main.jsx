@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-interface User {
+/* interface User {
   id: number;
   firstName: string;
   lastName: string;
@@ -11,7 +11,7 @@ interface User {
   graduationYear: string;
   profilePicture: string;
   created_at: string;
-}
+} */
 
 function NavBar(props) {
   return (
@@ -60,7 +60,7 @@ function Post(props) {
 
 export default function Main() {
 
-  const [users, setUsers] = useState(null);
+/*   const [users, setUsers] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -73,11 +73,9 @@ export default function Main() {
     };
 
     fetchUsers();
-  }, []);
+  }, []); */
 
-  return loading ? (
-    <p>Loading...</p>
-  ) : (
+  return (
     <div class="main">
       <NavBar title='jellovent' />
       <div class="search">
@@ -94,7 +92,7 @@ export default function Main() {
             </h2>
           </div>
           <Post image="https://clicklovegrow.com/wp-content/uploads/2019/08/1-2.jpg" name="Sample Name 1" caption="Sample Caption 1" />
-          <Post image="https://assets.mixbook.com/images/optimized/jpg/inside/1073/2560/3fa25_christian_bowen_w_Oe_DB_Kn5sdo_unsplash_4c13550ced.webp" name="Sample Name 2" caption="Sample Name 2" />
+          <Post image="https://assets.mixbook.com/images/optimized/jpg/inside/1073/2560/3fa25_christian_bowen_w_Oe_DB_Kn5sdo_unsplash_4c13550ced.webp" name="Sample Name 2" caption="Sample Caption 2" />
         </div>
       </div>
       <footer class="footer">
