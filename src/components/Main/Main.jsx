@@ -1,5 +1,17 @@
-import Reeact from 'react';
+import React from 'react';
 import { useState, useEffect } from 'react';
+
+interface User {
+  id: number;
+  firstName: string;
+  lastName: string;
+  email: string;
+  bio: string;
+  major: string;
+  graduationYear: string;
+  profilePicture: string;
+  created_at: string;
+}
 
 function NavBar(props) {
   return (
@@ -47,31 +59,49 @@ function Post(props) {
 }
 
 export default function Main() {
-    return(
-        <div class="main">
-        <NavBar title='jellovent' />
-        <div class="search">
-          <div class="container">
-            <div class="box">
-              <h2>Event Type</h2>
-              <h2 class="category">
-                event type name <br />
-                event type name <br />
-                event type name <br />
-                event type name<br />
-                event type name<br />
-                event type name<br />
-              </h2>
-            </div>
-            <Post image="https://clicklovegrow.com/wp-content/uploads/2019/08/1-2.jpg" name="Sample Name 1" caption="Sample Caption 1" />
-            <Post image="https://assets.mixbook.com/images/optimized/jpg/inside/1073/2560/3fa25_christian_bowen_w_Oe_DB_Kn5sdo_unsplash_4c13550ced.webp" name="Sample Name 2" caption="Sample Name 2" />
+
+  const [users, setUsers] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      const response = await fetch("https://disc-assignment-5-users-api.onrender.com/api/users")
+        .catch((err) => console.log("fetching user data failed"));
+      const data = await response.json();
+      setLoading(false);
+      setUsers(data);
+    };
+
+    fetchUsers();
+  }, []);
+
+  return loading ? (
+    <p>Loading...</p>
+  ) : (
+    <div class="main">
+      <NavBar title='jellovent' />
+      <div class="search">
+        <div class="container">
+          <div class="box">
+            <h2>Event Type</h2>
+            <h2 class="category">
+              event type name <br />
+              event type name <br />
+              event type name <br />
+              event type name<br />
+              event type name<br />
+              event type name<br />
+            </h2>
           </div>
+          <Post image="https://clicklovegrow.com/wp-content/uploads/2019/08/1-2.jpg" name="Sample Name 1" caption="Sample Caption 1" />
+          <Post image="https://assets.mixbook.com/images/optimized/jpg/inside/1073/2560/3fa25_christian_bowen_w_Oe_DB_Kn5sdo_unsplash_4c13550ced.webp" name="Sample Name 2" caption="Sample Name 2" />
         </div>
-        <footer class="footer">
-          <div>
-            <h2 align="center">footer</h2>
-          </div>
-        </footer>
       </div>
-    )
+      <footer class="footer">
+        <div>
+          <h2 align="center">footer</h2>
+        </div>
+      </footer>
+    </div>
+  )
 }
