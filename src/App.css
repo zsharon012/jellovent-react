@@ -96,5 +96,6 @@
   background-color: #a7d4ff;
   display: flex;
   flex-direction: column;
-  height: 60px;
+  height: 100px;
+  padding-top: 20px;
 }
