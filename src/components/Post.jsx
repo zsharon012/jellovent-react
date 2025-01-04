@@ -19,8 +19,8 @@ export default function Post(props) {
     return (
       <div class="profile_box">
         <div class="name_space">
-          <div class="icons"></div>
-          <div>{props.name}</div>
+          <div class="profile_pic"></div>
+          <h3>{props.name}</h3>
         </div>
         <img src={props.image} class="image" alt="event post image" />
         <div class="icon_space">

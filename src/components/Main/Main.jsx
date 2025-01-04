@@ -7,7 +7,7 @@ import Footer from "../Footer.jsx";
 export default function Main() {
   return (
     <div class="main">
-      <NavBar title='jellovent' />
+      <NavBar title='jellovent connections' />
       <div class="search">
         <div class="container">
           <FilterBox />
