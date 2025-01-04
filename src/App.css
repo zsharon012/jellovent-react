@@ -1,3 +1,11 @@
+.card {
+  background-color: #f3dcff;
+  border: 3px solid black;
+  width: 500px;
+  padding-left: 50px;
+  padding-bottom: 25px;
+}
+
 .name_space {
   display: flex;
   flex-direction: row;
@@ -26,7 +34,7 @@
 }
 
 .box {
-  background-color: lightyellow;
+  background-color: #fff6cf;
   border: 3px solid black;
   width: 280px;
   height: 480px;
@@ -65,7 +73,7 @@
 }
 
 .nav {
-  background-color: lightpink;
+  background-color: #f3dcff;
   height: 70px;
   display: flex;
   flex-direction: row;
@@ -85,7 +93,7 @@
 }
 
 .footer {
-  background-color: lightblue;
+  background-color: #a7d4ff;
   display: flex;
   flex-direction: column;
   height: 60px;

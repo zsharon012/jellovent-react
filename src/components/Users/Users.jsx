@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import UserCard from "../UserCard.jsx";
 
 export default function FetchData() {
     const [users, setUsers] = useState(null);
@@ -24,7 +25,7 @@ export default function FetchData() {
             <ul>
                 {users.map((list) => (
                     <li key={list.id}>
-                        {list.id}{list.firstName}{list.lastName}{list.email}{list.bio}{list.major}{list.graduationYear}{list.profilePicture}{list.created_at}
+                        <UserCard user={list} />
                     </li>
                 ))}
             </ul>
