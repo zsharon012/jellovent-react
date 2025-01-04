@@ -21,16 +21,18 @@
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: space-evenly;
   align-items: stretch;
+  padding-left: 30px;
+  padding-top: 30px;
 }
 
 .box {
   background-color: lightyellow;
   border: 3px solid black;
-  width: 250px;
-  height: 500px;
-  padding-top: 30px;
+  width: 280px;
+  height: 480px;
+  padding-top: 10px;
   gap: 20px;
-  padding-left: 10px;
+  padding-left: 40px;
 }
 
 .profile_box{
