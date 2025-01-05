@@ -1,7 +1,23 @@
+.profile_pic {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: inline-block;
+  outline-style: solid;
+}
+
+.card {
+  background-color: #f3dcff;
+  border: 3px solid black;
+  width: 500px;
+  padding-left: 50px;
+  padding-bottom: 25px;
+}
+
 .name_space {
   display: flex;
   flex-direction: row;
-  padding-top: 30px;
+  padding-top: 5px;
   gap: 20px;
   padding-left: 10px;
 }
@@ -21,22 +37,23 @@
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: space-evenly;
   align-items: stretch;
+  padding-left: 30px;
+  padding-top: 30px;
 }
 
 .box {
-  background-color: lightyellow;
+  background-color: #fff6cf;
   border: 3px solid black;
-  width: 250px;
-  height: 500px;
-  padding-top: 30px;
+  width: 280px;
+  height: 480px;
+  padding-top: 10px;
   gap: 20px;
-  padding-left: 10px;
+  padding-left: 40px;
 }
 
 .profile_box{
-  width: 250px;
+  width: 450px;
   height: 500px;
-  padding-top: 30px;
   gap: 20px;
   padding-left: 10px;
 }
@@ -50,10 +67,12 @@
   width: 30px;
   height: 30px;
 }
+
 .image {
-  width: 200px;
-  height: 200px;
-  padding-top: 50px;
+  width: 300px;
+  height: 300px;
+  padding-top: 20px;
+  padding-bottom: 10px;
   overflow: hidden;
   padding-left: 10px;
 }
@@ -63,8 +82,8 @@
 }
 
 .nav {
-  background-color: lightpink;
-  height: 70px;
+  background-color: #f3dcff;
+  height: 80px;
   display: flex;
   flex-direction: row;
   gap: 30px;
@@ -74,7 +93,7 @@
 
 .body {
   background-color: black;
-  width: 300px;
+  width: 500px;
   height: 30px;
 }
 
@@ -83,8 +102,9 @@
 }
 
 .footer {
-  background-color: lightblue;
+  background-color: #a7d4ff;
   display: flex;
   flex-direction: column;
-  height: 60px;
+  height: 100px;
+  padding-top: 20px;
 }
