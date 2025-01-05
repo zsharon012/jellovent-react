@@ -6,7 +6,7 @@ const useUsers = () => {
 
     useEffect(() => {
         const fetchUsers = async () => {
-            const response = await fetch("https://disc-assignment-5-users-api.onrender.com/api/users")
+            const response = await fetch("http://localhost:3005/api/users")
                 .catch((err) => console.log("fetching user data failed"));
             const data = await response.json();
             setLoading(false);
